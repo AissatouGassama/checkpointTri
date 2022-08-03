@@ -1,0 +1,23 @@
+ALGORITHM TriInsertion
+VAR
+    i, j, tmp, N, :INTEGER
+    tab: ARRAY_OF INTEGER
+BEGIN
+    write("donner la taille du tableau")
+    read(N)
+
+    FOR i FROM 0 TO N-1 STEP 1  DO
+        write("donner l'element à l'indice,"i)
+        read(tab[i]);
+
+        FOR i FROM 1 TO N-1 STEP 1  DO
+            tmp=tab[i];
+            i=j
+            WHILE (tab[j-1]>tmp ) DO
+                tab[j]=tab[j-1];
+                j--;
+            END_WHILE
+            tab[j]=tmp;
+        END_FOR
+    END_FOR
+END
